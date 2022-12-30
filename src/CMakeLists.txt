@@ -16,7 +16,7 @@ include(cmake/lib.cmake)
 
 if (NOT SURGE_SKIP_JUCE_FOR_RACK)
   message(STATUS "Using JUCE from ${SURGE_JUCE_PATH}")
-  add_subdirectory(${SURGE_JUCE_PATH} ${CMAKE_BINARY_DIR}/JUCE EXCLUDE_FROM_ALL)
+  add_subdirectory(JUCE)
 endif()
 
 if(${CMAKE_VERSION} VERSION_LESS 3.20)
