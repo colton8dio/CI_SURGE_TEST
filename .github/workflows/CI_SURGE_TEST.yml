@@ -1,4 +1,4 @@
-name: CI_CMake_Test
+name: CI_SURGE_TEST
 
 on:
   workflow_dispatch: # lets you run a build from the UI
@@ -13,9 +13,9 @@ concurrency:
   cancel-in-progress: true
 # Defines Name (must match), What type of build (release, debug), Where to store builds, Git tokens, threading, homebrew install cleanup
 env:
-  PROJECT_NAME: CI_CMake_Test
+  PROJECT_NAME: CI_SURGE_TEST
   BUILD_TYPE: Release
-  BUILD_DIR: Builds
+  BUILD_DIR: Build
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   CMAKE_BUILD_PARALLEL_LEVEL: 3 # Use up to 3 cpus to build juceaide, etc
   HOMEBREW_NO_INSTALL_CLEANUP: 1
